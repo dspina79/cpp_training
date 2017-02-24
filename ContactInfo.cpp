@@ -39,3 +39,7 @@ string ContactInfo::getFullName(){
     return fn;
 
 }
+
+ContactInfo::~ContactInfo(){
+    cout << "Contact details destroyed" << endl;
+}

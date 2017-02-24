@@ -6,11 +6,18 @@
 #include "ContactInfo.cpp"
 
 using namespace std;
-
+void doCalDemo();
+void doUserClassDemo();
 
 int main(){
 
-    cout << "Hello User! " << endl;
+    doUserClassDemo();
+
+    return 0;
+}
+
+void doUserClassDemo(){
+        cout << "Hello User! " << endl;
     User u("joeuser", "password");
     u.setPassword("newPassword@@");
 
@@ -22,6 +29,10 @@ int main(){
     cout << "Result of (joeuser, password) auth check: " << u.authenticate("joeuser", "password") << endl;
     cout << "Result of (joeuser, newPassword@@) auth check: " << u.authenticate("joeuser", "newPassword@@") << endl;
 
+}
+
+void doCalDemo(){
+
     SimpleCalc calc;
     float x = 16;
     float y = 2;
@@ -32,5 +43,4 @@ int main(){
     cout << "Result of " << x << " / " << y << " = " << calc.divide(x, y) << endl;    
     cout << "Result of " << x << " squared = " << calc.square(x) << endl;
 
-    return 0;
 }

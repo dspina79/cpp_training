@@ -15,7 +15,7 @@ class ContactInfo{
     string Suffix;
     string Title;
     string getFullName();
-
+    ~ContactInfo();
 };
 
 #endif
