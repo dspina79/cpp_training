@@ -1,15 +1,16 @@
 #include "User.h"
-
+#include "ContactInfo.h"
 using namespace std;
 
 User::User(){
     cout << "User initialized.." << endl;
+    this->contact = ContactInfo("", "");
 }
 
 User::User(string username, string password){
     this->username = username;
     this->password = password;
-
+    this->contact = ContactInfo("", "");
     cout << "User initialized with " << username << endl;
 }
 
@@ -24,4 +25,9 @@ bool User::authenticate(string username, string password){
 
 User::~User(){
     cout << "User detroyed..." << endl;
+}
+
+void User::addContactData(ContactInfo &contact){
+    this->contact = contact;
+    cout << this->contact.getFullName() << " added." << endl;
 }
